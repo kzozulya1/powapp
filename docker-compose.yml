@@ -1,0 +1,11 @@
+version: "3"
+services:
+  powapp:
+    image: kzozulya/pow-app:0.1.0
+    container_name: pow-app
+    restart: always
+    environment:
+      POW_TCP_PORT: 8080
+      POW_READ_TIMEOUT: 10s
+    network_mode: "host"   
+  

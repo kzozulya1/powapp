@@ -1,0 +1,85 @@
+# https://github.com/golangci/golangci-lint
+run:
+  timeout: 1m0s
+
+linters-settings:
+  maligned:
+    suggest-new: true
+  lll:
+    line-length: 140
+    tab-width: 4
+  funlen:
+    lines: 100
+    statements: 55
+  gocyclo:
+    min-complexity: 15
+  dupl:
+    threshold: 100
+  gocritic:
+    settings:
+      hugeParam:
+        sizeThreshold: 200
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - performance
+      - style
+    disabled-checks:
+      - dupImport # https://github.com/go-critic/go-critic/issues/845
+      - ifElseChain
+      - octalLiteral
+      - wrapperFunc
+      - emptyFallthrough
+      - whyNoLint
+
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - dogsled
+    - errcheck
+    - gochecknoinits
+    - goconst
+    - gocritic
+    - gocyclo
+    - gofmt
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - nakedret
+    - staticcheck
+    - stylecheck
+    - typecheck
+    - unconvert
+    - unparam
+    - unused
+    - whitespace
+    - gocognit
+    - prealloc
+
+issues:
+  exclude-rules:
+    - path: internal/extmocks/
+      linters:
+        - lll
+        - dupl
+    - path: internal/model/
+      linters:
+        - lll
+        - dupl
+    - path: _test\.go
+      linters:
+        - lll
+        - dupl
+        - unused
+
+  exclude:
+    - "struct field UseTlsBundle should be UseTLSBundle"
+    - "Tls(|Server)Config should be"
+    - 'Blocklisted import crypto/sha1: weak cryptographic primitive'
+    - 'SA1019: grpc.WithTimeout is deprecated'
+    - 'SA1019: userInfo.RoleIds is deprecated'
+    - 'SA1019: row.userInfo.RoleIds is deprecated'
