@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"github.com/gernest/wow"
 	"github.com/gernest/wow/spin"
+	"github.com/kzozulya1/powapp/internal/pow"
 	"log"
 	"net"
 	"os"
-	"powapp/internal/pow"
 )
 
 const (

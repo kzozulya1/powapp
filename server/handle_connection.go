@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/kzozulya1/powapp/internal/pow"
+	"github.com/kzozulya1/powapp/internal/verification"
+	"github.com/kzozulya1/powapp/internal/wisdomquotes"
 	"net"
-	"powapp/internal/pow"
-	"powapp/internal/verification"
-	"powapp/internal/wisdomquotes"
 )
 
 // handleConnection handles new TCP connection

@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/kzozulya1/powapp/internal/pow"
 	"log"
 	"net"
 	"os"
-	"powapp/internal/pow"
 	"time"
 )
 

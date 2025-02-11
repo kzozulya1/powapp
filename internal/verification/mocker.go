@@ -2,7 +2,7 @@ package verification
 
 import (
 	"github.com/golang/mock/gomock"
-	"powapp/internal/pow"
+	"github.com/kzozulya1/powapp/internal/pow"
 )
 
 // mocker is a model for tests

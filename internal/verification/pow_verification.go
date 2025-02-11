@@ -2,8 +2,8 @@ package verification
 
 import (
 	"errors"
+	"github.com/kzozulya1/powapp/internal/pow"
 	"net"
-	"powapp/internal/pow"
 )
 
 // maxNonceSize max buffer size for client nonce response

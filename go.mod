@@ -1,4 +1,4 @@
-module powapp
+module github.com/kzozulya1/powapp
 
 go 1.22.7
 
